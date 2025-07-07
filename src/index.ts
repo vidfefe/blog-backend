@@ -5,14 +5,14 @@ import helmet from "helmet";
 import compression from "compression";
 import morgan from "morgan";
 
-import { connectDB } from "./db";
-import { config } from "./config";
-import authRoutes from "./routes/auth";
-import postRoutes from "./routes/posts";
-import commentsRouter from "./routes/comment";
-import uploadRoutes from "./routes/upload";
-import tagsRouter from "./routes/tags";
-import { errorHandler } from "./middlewares/errorHandler";
+import { connectDB } from "./db/index.js";
+import { config } from "./config.js";
+import authRoutes from "./routes/auth.js";
+import postRoutes from "./routes/posts.js";
+import commentsRouter from "./routes/comment.js";
+import uploadRoutes from "./routes/upload.js";
+import tagsRouter from "./routes/tags.js";
+import { errorHandler } from "./middlewares/errorHandler.js";
 
 dotenv.config();
 

@@ -1,7 +1,4 @@
-import { Document } from "mongoose";
-import { model } from "mongoose";
-import { Schema } from "mongoose";
-import { Types } from "mongoose";
+import { Document, model, Schema, Types } from "mongoose";
 
 export interface User {
   fullname: string;

@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { Types } from "mongoose";
 
-import { CommentBody } from "../validations/post";
-import { PostModel } from "../models/Post";
+import { CommentBody } from "../validations/post.js";
+import { PostModel } from "../models/Post.js";
 
 export const addComment = async (
   req: Request<{ postId: string }, {}, CommentBody>,

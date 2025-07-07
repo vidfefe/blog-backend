@@ -1,8 +1,8 @@
 import { Request, Response } from "express";
 import { SortOrder, Types } from "mongoose";
 
-import { PostModel } from "../models/Post";
-import { CreatePostBody } from "../validations/post";
+import { PostModel } from "../models/Post.js";
+import { CreatePostBody } from "../validations/post.js";
 
 export const create = async (
   req: Request<{}, {}, CreatePostBody>,

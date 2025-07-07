@@ -2,9 +2,9 @@ import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
 import { Request, Response } from "express";
 
-import { UserModel } from "../models/User";
-import { LoginBody, RegisterBody } from "../validations/auth";
-import { config } from "../config";
+import { UserModel } from "../models/User.js";
+import { LoginBody, RegisterBody } from "../validations/auth.js";
+import { config } from "../config.js";
 
 function generateToken(userId: string) {
   return jwt.sign(

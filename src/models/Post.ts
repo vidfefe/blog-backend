@@ -1,6 +1,6 @@
 import { Document, model, Schema, Types } from "mongoose";
 
-import { CommentDocument, CommentSchema } from "./Comment";
+import { CommentDocument, CommentSchema } from "./Comment.js";
 
 export interface Post {
   title: string;
