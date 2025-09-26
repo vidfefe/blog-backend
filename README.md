@@ -24,4 +24,4 @@ npm install
 npm run start:dev
 ```
 
-(Demo Vibe Blog)[https://blog-frontend-lake-ten.vercel.app/]
+[Demo Vibe Blog](https://blog-frontend-lake-ten.vercel.app/)
