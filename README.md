@@ -9,7 +9,8 @@ Backend service for the blog application. It provides user authentication and au
 - **MongoDB** with **Mongoose**
 - **JWT** for authentication
 - **Bcrypt** for password hashing
-- **Multer** for file uploads
+- **Multer** (used for handling file uploads, now integrated with **Cloudinary**)
+- **Cloudinary** for file storage
 - **Zod** + **express-validator** for validation
 - **Helmet**, **CORS**, **compression**, **morgan**, **express-rate-limit** for security and performance
 - **dotenv** for environment variables
@@ -18,9 +19,18 @@ Backend service for the blog application. It provides user authentication and au
 ## ⚙️ How to Run
 
 ```bash
+# 1. Clone the repository
 git clone https://github.com/vidfefe/blog-backend.git
 cd blog-backend
+
+# 2. Install dependencies
 npm install
+
+# 3. Create a .env file based on .env.example and fill in your values
+cp .env.example .env
+# Then open .env and add your own values
+
+# 4. Start the development server
 npm run start:dev
 ```
 
