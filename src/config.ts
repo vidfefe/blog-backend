@@ -21,8 +21,11 @@ export const config = {
     jwtSecret: required("JWT_SECRET"),
   },
 
-  uploads: {
-    dir: path.resolve(process.env.UPLOAD_DIR ?? "uploads"),
+  cloud: {
+    name: required("CLOUDINARY_CLOUD_NAME"),
+    apiKey: required("CLOUDINARY_API_KEY"),
+    secretKey: required("CLOUDINARY_API_SECRET"),
+    folder: process.env.CLOUDINARY_FOLDER ?? "uploads",
   },
 
   corsOrigin: process.env.CORS_ORIGIN?.split(",") ?? "*",

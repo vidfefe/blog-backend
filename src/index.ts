@@ -32,8 +32,6 @@ async function main() {
   app.use(compression());
   app.use(morgan(config.env === "production" ? "combined" : "dev"));
 
-  app.use("/uploads", express.static(config.uploads.dir));
-
   app.use("/auth", authRoutes);
   app.use("/posts", postRoutes);
   app.use("/posts/:postId/comments", commentsRouter);
