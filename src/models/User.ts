@@ -39,10 +39,11 @@ const userSchema = new Schema<UserDocument>(
 userSchema.set("toJSON", {
   virtuals: true,
   versionKey: false,
-  transform: (_doc, ret) => {
-    ret.id = ret._id.toString();
+  transform: (_doc, ret: any) => {
+    ret.id = String(ret._id);
     delete ret._id;
-    delete ret.passwordHash;
+    delete ret.password;
+    return ret;
   },
 });
 
